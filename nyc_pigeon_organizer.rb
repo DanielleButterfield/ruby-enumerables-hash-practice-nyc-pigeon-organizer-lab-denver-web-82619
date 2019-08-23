@@ -31,7 +31,7 @@ def nyc_pigeon_organizer (data)
     end
   end
 
-  bird_list =organized.keys
+  bird_list = organized.keys
 
   data[:color].each do |colors, names|
     names.each do |comp_bird|
