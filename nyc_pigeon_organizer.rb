@@ -1,12 +1,12 @@
 def nyc_pigeon_organizer(data)
   organized = {}
-  data.map { |attri, speci|
-    speci.map { |attSpec, birds|
-      birds.map { |names|
+  data.each do |attri, speci|
+    speci.each do |attSpec, birds|
+      birds.each do |names|
         organized[names] = {:color => [], :gender => [], :lives = > []}
-      }
-    }
-  }
+      end
+    end
+  end
 
   bird_list = organized.keys
   data[:color].each do |data_lev, assign_bird|
