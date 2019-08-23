@@ -43,21 +43,21 @@ def nyc_pigeon_organizer (data)
     end
   end
 
-  data[:gender].each do |gender, type|
-    type.each do |bird_name|
-      x.each do |item|
-        if bird_name === item
-          final[item][:gender] << gender.to_s
+  data[:gender].each do |genders, names|
+    names.each do |comp_bird|
+      bird_list.each do |list_bird|
+        if comp_bird === list_bird
+          organized[comp_bird][:gender] << genders.to_s
         end
       end
     end
   end
 
-  data[:lives].each do |location, name|
-    name.each do |bird_name|
-      x.each do |item|
-        if bird_name === item
-          final[item][:lives] << location
+  data[:lives].each do |home, names|
+    names.each do |comp_bird|
+      bird_list.each do |list_bird|
+        if comp_bird === list_bird
+          organized[comp_bird][:lives] << home
         end
       end
     end
